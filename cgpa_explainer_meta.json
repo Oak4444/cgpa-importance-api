@@ -53,7 +53,7 @@
   },
   "random_state": 42,
   "model_type": "RandomForestClassifier",
-  "n_estimators": 600,
+  "n_estimators": 300,
   "scoring": "f1_macro",
   "sklearn_version": "1.6.1"
 }

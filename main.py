@@ -278,7 +278,7 @@ async def compute_importance(request: Request):
         deans_min = float(payload.get("deans_min", 3.67))
         at_risk_max = float(payload.get("at_risk_max", 2.00))
         records = payload.get("records", [])
-        n_repeats = int(payload.get("n_repeats", 15))
+        n_repeats = int(payload.get("n_repeats", 10))
 
         if at_risk_max >= deans_min:
             raise ValueError("Invalid thresholds: at_risk_max must be smaller than deans_min.")
@@ -287,10 +287,10 @@ async def compute_importance(request: Request):
             raise ValueError("No records provided for importance computation.")
 
         if n_repeats <= 0:
-            n_repeats = 15
+            n_repeats = 10
 
-        if n_repeats > 50:
-            n_repeats = 50
+        if n_repeats > 10:
+            n_repeats = 10
 
         df = pd.DataFrame(records)
 

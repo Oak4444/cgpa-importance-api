@@ -1,0 +1,59 @@
+{
+  "DEANS_MIN": 3.67,
+  "AT_RISK_MAX": 2.0,
+  "FEATURE_COLS": [
+    "HSC",
+    "SSC",
+    "Computer",
+    "Preparation",
+    "Gaming",
+    "Attendance",
+    "English",
+    "Extra",
+    "Job"
+  ],
+  "USE_COLS": [
+    "HSC",
+    "SSC",
+    "Computer",
+    "Preparation",
+    "Gaming",
+    "Attendance",
+    "English",
+    "Extra",
+    "Job",
+    "Overall"
+  ],
+  "TIME_MAP": {
+    "0-1 Hour": 1,
+    "1-2 Hours": 2,
+    "2-3 Hours": 3,
+    "More than 3 Hours": 4
+  },
+  "ATT_MAP": {
+    "Below 40%": 1,
+    "40%-59%": 2,
+    "60%-79%": 3,
+    "80%-100%": 4
+  },
+  "YESNO_MAP": {
+    "No": 0,
+    "Yes": 1
+  },
+  "IMPUTE_VALUES": {
+    "Preparation": 3.0,
+    "Gaming": 4.0,
+    "Attendance": 3.0,
+    "HSC": 4.17,
+    "SSC": 4.94,
+    "Computer": 3.0,
+    "English": 4.0,
+    "Extra": 0,
+    "Job": 0
+  },
+  "random_state": 42,
+  "model_type": "RandomForestClassifier",
+  "n_estimators": 600,
+  "scoring": "f1_macro",
+  "sklearn_version": "1.6.1"
+}
